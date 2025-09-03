@@ -33,9 +33,10 @@ export default function DashboardHeader() {
               <span className="hidden sm:inline font-bold text-2xl sm:text-3xl">
                 Welcome to Photo Album Pro!!!
               </span>
-              <span className="sm:hidden font-bold text-xl">Photo Album Pro</span>
+              <span className="sm:hidden font-bold text-xl">
+                Photo Album Pro
+              </span>
             </h1>
-
           </div>
         </div>
 
@@ -66,38 +67,12 @@ export default function DashboardHeader() {
                     src="/placeholder.svg?height=40&width=40"
                     alt="User"
                   />
-                  <AvatarFallback className="bg-white text-[#017783] text-xs sm:text-sm font-semibold">
+                  <AvatarFallback className="bg-white text-[#FF6600] text-xs sm:text-sm font-semibold">
                     DA
                   </AvatarFallback>
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-48 sm:w-56" align="end" forceMount>
-              <DropdownMenuLabel className="font-normal">
-                <div className="flex flex-col space-y-1">
-                  <p className="text-sm font-medium leading-none">
-                    Dance Admin
-                  </p>
-                  <p className="text-xs leading-none text-muted-foreground">
-                    admin@danceattix.com
-                  </p>
-                </div>
-              </DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <User className="mr-2 h-4 w-4" />
-                <span>Profile</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Settings className="mr-2 h-4 w-4" />
-                <span>Settings</span>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={handleLogout}>
-                <LogOut className="mr-2 h-4 w-4" />
-                <span>Log out</span>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
           </DropdownMenu>
         </div>
       </div>
