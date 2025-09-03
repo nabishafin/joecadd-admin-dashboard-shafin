@@ -13,7 +13,7 @@ import ResetPassword from "../pages/auth/ResetPassword";
 
 // Profile/Settings Pages
 import Profile from "../pages/dashboardpages/personalinformation/Profile";
-import EditProfile from "../pages/dashboardpages/personalinformation/Editprofile";
+
 import TermsAndConditions from "../pages/dashboardpages/terms/TermsAndConditions";
 import EditTermsAndConditions from "../pages/dashboardpages/terms/EditTermsAndConditions";
 import PrivacyPolicy from "../pages/dashboardpages/privacypolicy/PrivacyPolicy";
@@ -30,6 +30,7 @@ import Contractor from "@/pages/dashboardpages/Contractor/Contractor";
 import Wallet from "@/pages/dashboardpages/wallet/Wallet";
 import ChangedPassword from "@/pages/auth/Changepassword";
 import DashboardOverview from "@/pages/dashboardpages/DashboardOverview/DashboardOverview";
+import EditProfile from "@/pages/dashboardpages/personalinformation/EditProfile";
 
 const routes = createBrowserRouter([
   {
