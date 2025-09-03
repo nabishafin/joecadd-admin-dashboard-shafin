@@ -10,7 +10,6 @@ import OTPVerification from "../pages/auth/OTPVerification";
 import ResetPassword from "../pages/auth/ResetPassword";
 
 // Dashboard Pages
-import DashboardOverview from "../pages/dashboardpages/dashboardOverview/DashboardOverview";
 
 // Profile/Settings Pages
 import Profile from "../pages/dashboardpages/personalinformation/Profile";
@@ -30,6 +29,7 @@ import Managers from "../pages/dashboardpages/managers/Managers";
 import Contractor from "@/pages/dashboardpages/Contractor/Contractor";
 import Wallet from "@/pages/dashboardpages/wallet/Wallet";
 import ChangedPassword from "@/pages/auth/Changepassword";
+import DashboardOverview from "@/pages/dashboardpages/DashboardOverview/DashboardOverview";
 
 const routes = createBrowserRouter([
   {
