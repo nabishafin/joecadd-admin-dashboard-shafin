@@ -102,12 +102,14 @@ const SignInPage = () => {
                 </div>
 
                 {/* Sign In Button */}
-                <Button
-                  type="submit"
-                  className="w-full h-11 bg-gradient-to-b from-[#FF6600] to-[#FF6600] hover:bg-red-800 text-white font-medium"
-                >
-                  Sign In
-                </Button>
+                <Link to={"/dashboard"}>
+                  <Button
+                    type="submit"
+                    className="w-full h-11 bg-gradient-to-b from-[#FF6600] to-[#FF6600] hover:bg-red-800 text-white font-medium"
+                  >
+                    Sign In
+                  </Button>
+                </Link>
               </form>
             </CardContent>
           </Card>
