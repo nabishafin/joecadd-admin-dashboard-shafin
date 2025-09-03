@@ -25,15 +25,11 @@ import EditAbout from "../pages/dashboardpages/about/EditAbout";
 // Notification Pages
 import AllNotifications from "../pages/dashboardpages/notification/AllNotifications";
 
-// User Pages (keeping the existing one, but might need to be renamed to Tenants)
+
 import AllUsers from "../pages/dashboardpages/user/AllUsers";
 import Managers from "../pages/dashboardpages/managers/Managers";
-
-// TODO: Create these new page components to match your Rentalvate structure
-// import TenantsPage from "../pages/dashboardpages/tenants/TenantsPage";
-// import LandlordPage from "../pages/dashboardpages/landlord/LandlordPage";
-// import ContractorPage from "../pages/dashboardpages/contractor/ContractorPage";
-// import WalletPage from "../pages/dashboardpages/wallet/WalletPage";
+import Contractor from "@/pages/dashboardpages/Contractor/Contractor";
+import Wallet from "@/pages/dashboardpages/wallet/Wallet";
 
 const routes = createBrowserRouter([
   {
@@ -64,16 +60,16 @@ const routes = createBrowserRouter([
 
       // Main Navigation Routes (based on your Rentalvate sidebar)
       { path: "tenants", element: <AllUsers /> },
-      { path: "managers", element: <Managers /> }, // Uncomment when you create the component
-      // { path: "contractor", element: <ContractorPage /> }, // Uncomment when you create the component
-      // { path: "wallet", element: <WalletPage /> }, // Uncomment when you create the component
+      { path: "managers", element: <Managers /> },
+      { path: "contractor", element: <Contractor /> },
+      { path: "wallet", element: <Wallet /> },
 
       // Legacy route (keeping for backward compatibility)
       { path: "users", element: <AllUsers /> },
 
       // Notifications
       { path: "notifications", element: <AllNotifications /> },
-      { path: "notificatons", element: <AllNotifications /> }, // Keep typo for backward compatibility
+
 
       // Settings Routes
       { path: "settings/profile", element: <Profile /> },
