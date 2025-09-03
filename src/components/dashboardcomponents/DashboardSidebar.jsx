@@ -11,14 +11,18 @@ import {
   ChevronDown,
   Menu,
   Music,
+  Home,
+  Wallet,
+  HardHat,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logo from '../../assets/logo.png'
 
-// Sidebar Items
+// Updated Sidebar Items to match Rentalvate structure
 const sidebarItems = [
   {
     title: "Dashboard",
@@ -26,9 +30,24 @@ const sidebarItems = [
     icon: LayoutDashboard,
   },
   {
-    title: "Users",
-    href: "/dashboard/users",
+    title: "Tenants",
+    href: "/dashboard/tenants",
     icon: Users2,
+  },
+  {
+    title: "Landlord",
+    href: "/dashboard/landlord",
+    icon: Home,
+  },
+  {
+    title: "Contractor",
+    href: "/dashboard/contractor",
+    icon: HardHat,
+  },
+  {
+    title: "Wallet",
+    href: "/dashboard/wallet",
+    icon: Wallet,
   },
   {
     title: "Settings",
@@ -59,14 +78,12 @@ const sidebarItems = [
   },
 ];
 
-// Logo Section
-function LogoSection({ name = "Dance Attix", title = "Admin Panel" }) {
+// Logo Section - Updated for Rentalvate
+function LogoSection({ name = "Rentalvate", title = "Admin Panel" }) {
   return (
     <Link to="/dashboard">
-      <div className="flex items-center p-4 sm:p-6 flex-col justify-center">
-        <img src="/logo.svg" alt="logo" className="w-8 h-8 sm:w-10 sm:h-10" />
-        <h1 className="text-xl sm:text-2xl font-bold mt-2">{name}</h1>
-        <p className="text-xs sm:text-sm mt-1">{title}</p>
+      <div className="flex items-center p-4 sm:p-6 flex-col justify-center text-white">
+        <img src={logo} alt="logo" />
       </div>
     </Link>
   );
@@ -102,8 +119,8 @@ function SidebarNav({ onLinkClick, isMobile = false }) {
                     className={cn(
                       "w-full justify-start gap-2 h-8 sm:h-10 text-sm sm:text-base",
                       isActive
-                        ? "bg-teal-50 text-[#017783] hover:bg-teal-100"
-                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                        ? "bg-white text-[#FF6600] hover:bg-orange-100"
+                        : "text-white hover:bg-gray-50 hover:text-gray-900"
                     )}
                   >
                     <item.icon className="h-3 w-3 sm:h-4 sm:w-4" />
@@ -131,8 +148,8 @@ function SidebarNav({ onLinkClick, isMobile = false }) {
                                 className={cn(
                                   "w-full justify-start gap-2 h-7 sm:h-9 text-xs sm:text-sm",
                                   isChildActive
-                                    ? "bg-white text-[#017783]"
-                                    : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                                    ? "bg-white text-[#FF6600]"
+                                    : "text-white hover:bg-gray-50 hover:text-gray-700"
                                 )}
                               >
                                 <child.icon className="h-3 w-3" />
@@ -152,8 +169,8 @@ function SidebarNav({ onLinkClick, isMobile = false }) {
                     className={cn(
                       "w-full justify-start gap-2 h-8 sm:h-10 text-sm sm:text-base",
                       isActive
-                        ? "bg-white text-[#017783]"
-                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                        ? "bg-white text-[#FF6600]"
+                        : "text-white hover:bg-gray-50 hover:text-gray-900"
                     )}
                   >
                     <item.icon className="h-3 w-3 sm:h-4 sm:w-4" />
@@ -165,7 +182,7 @@ function SidebarNav({ onLinkClick, isMobile = false }) {
           );
         })}
       </ul>
-      
+
       {/* Logout button at the bottom */}
       <div className="mt-auto p-2 sm:p-4 border-t border-gray-200">
         <Link to="/logout" onClick={onLinkClick}>
@@ -173,11 +190,11 @@ function SidebarNav({ onLinkClick, isMobile = false }) {
             variant="ghost"
             className={cn(
               "w-full justify-start gap-2 h-8 sm:h-10 text-sm sm:text-base",
-              "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+              "text-white hover:bg-gray-50 hover:text-gray-900"
             )}
           >
             <LogOut className="h-3 w-3 sm:h-4 sm:w-4" />
-            Logout
+            Log Out
           </Button>
         </Link>
       </div>
@@ -188,14 +205,14 @@ function SidebarNav({ onLinkClick, isMobile = false }) {
 // Desktop Sidebar
 function DesktopSidebar() {
   return (
-    <div className="hidden lg:flex h-full w-64 flex-col bg-[#E8E8E8] border-r border-gray-200">
+    <div className="hidden lg:flex h-full w-64 flex-col bg-[#1A1F36] border-r border-gray-200">
       <LogoSection />
       <SidebarNav />
     </div>
   );
 }
 
-// Mobile Sidebar - Fixed burger button styling
+// Mobile Sidebar - Updated for Rentalvate
 function MobileSidebar() {
   const [open, setOpen] = useState(false);
 
@@ -211,20 +228,10 @@ function MobileSidebar() {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-64 p-0 sm:max-w-sm">
-        <div className="flex h-full flex-col bg-white">
+        <div className="flex h-full flex-col bg-[#1A1F36]">
           {/* Mobile Logo */}
           <div className="flex items-center p-4 border-b border-gray-200">
-            <div className="flex items-center gap-2">
-              <div className="bg-teal-600 p-1 sm:p-2 rounded-lg">
-                <Music className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-              </div>
-              <div>
-                <h2 className="text-base sm:text-lg font-semibold text-gray-900">
-                  Dance Attix
-                </h2>
-                <p className="text-xs sm:text-sm text-gray-500">Admin Panel</p>
-              </div>
-            </div>
+            <img src={logo} alt="" />
           </div>
           <SidebarNav onLinkClick={() => setOpen(false)} isMobile={true} />
         </div>

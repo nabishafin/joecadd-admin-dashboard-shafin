@@ -20,7 +20,7 @@ export default function DashboardHeader() {
   };
 
   return (
-    <header className="bg-[#FFFFFF] text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+    <header className="bg-[#FF6600] text-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2 sm:gap-4">
           {/* Mobile Sidebar Trigger */}
@@ -35,7 +35,7 @@ export default function DashboardHeader() {
               </span>
               <span className="sm:hidden font-bold text-xl">Photo Album Pro</span>
             </h1>
-          
+
           </div>
         </div>
 
