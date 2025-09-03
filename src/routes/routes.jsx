@@ -27,6 +27,7 @@ import AllNotifications from "../pages/dashboardpages/notification/AllNotificati
 
 // User Pages (keeping the existing one, but might need to be renamed to Tenants)
 import AllUsers from "../pages/dashboardpages/user/AllUsers";
+import Managers from "../pages/dashboardpages/managers/Managers";
 
 // TODO: Create these new page components to match your Rentalvate structure
 // import TenantsPage from "../pages/dashboardpages/tenants/TenantsPage";
@@ -62,9 +63,8 @@ const routes = createBrowserRouter([
       { index: true, element: <DashboardOverview /> },
 
       // Main Navigation Routes (based on your Rentalvate sidebar)
-      { path: "tenants", element: <AllUsers /> }, // Using existing AllUsers component for now
-      // { path: "tenants", element: <TenantsPage /> }, // Uncomment when you create the component
-      // { path: "landlord", element: <LandlordPage /> }, // Uncomment when you create the component
+      { path: "tenants", element: <AllUsers /> },
+      { path: "managers", element: <Managers /> }, // Uncomment when you create the component
       // { path: "contractor", element: <ContractorPage /> }, // Uncomment when you create the component
       // { path: "wallet", element: <WalletPage /> }, // Uncomment when you create the component
 

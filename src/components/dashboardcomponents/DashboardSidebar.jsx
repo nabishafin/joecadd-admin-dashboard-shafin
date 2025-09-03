@@ -35,8 +35,8 @@ const sidebarItems = [
     icon: Users2,
   },
   {
-    title: "Landlord",
-    href: "/dashboard/landlord",
+    title: "Managers",
+    href: "/dashboard/managers",
     icon: Home,
   },
   {

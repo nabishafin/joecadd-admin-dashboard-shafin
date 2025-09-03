@@ -9,22 +9,22 @@ import { Eye, X } from "lucide-react"
 
 const tenantData = [
   {
-    id: "01",
-    name: "Arnold",
-    email: "info@hosting.com",
-    address: "Gauteng, Boulders Beach, Cape Town",
-    joinDate: "02-22-2024",
-    endDate: "02-22-2024",
-    avatar: "/thoughtful-man.png",
+    id: "17",
+    name: "Lerato Moloi",
+    email: "l.moloi@example.com",
+    address: "Johannesburg, Parkhurst",
+    joinDate: "05-05-2024",
+    endDate: "05-05-2025",
+    avatar: "/female-avatar-9.png",
   },
   ...Array.from({ length: 20 }, (_, i) => ({
     id: String(i + 2).padStart(2, "0"),
-    name: "Arnold",
-    email: "info@hosting.com",
-    address: "Gauteng, Boulders Beach, Cape Town",
-    joinDate: "02-22-2024",
-    endDate: "02-22-2024",
-    avatar: "/thoughtful-man.png",
+    name: "Lerato Moloi",
+    email: "l.moloi@example.com",
+    address: "Johannesburg, Parkhurst",
+    joinDate: "05-05-2024",
+    endDate: "05-05-2025",
+    avatar: "/female-avatar-9.png",
   })),
 ]
 
@@ -52,7 +52,7 @@ export default function AllUsers() {
     <div className="">
       <div className="">
         <div className="mb-4">
-          <h1 className="text-2xl font-semibold text-gray-900">All Users</h1>
+          <h1 className="text-2xl font-semibold text-gray-900">All Tenant </h1>
         </div>
 
         <Table>
