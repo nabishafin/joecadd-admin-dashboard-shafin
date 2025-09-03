@@ -25,11 +25,11 @@ import EditAbout from "../pages/dashboardpages/about/EditAbout";
 // Notification Pages
 import AllNotifications from "../pages/dashboardpages/notification/AllNotifications";
 
-
 import AllUsers from "../pages/dashboardpages/user/AllUsers";
 import Managers from "../pages/dashboardpages/managers/Managers";
 import Contractor from "@/pages/dashboardpages/Contractor/Contractor";
 import Wallet from "@/pages/dashboardpages/wallet/Wallet";
+import ChangedPassword from "@/pages/auth/Changepassword";
 
 const routes = createBrowserRouter([
   {
@@ -70,10 +70,10 @@ const routes = createBrowserRouter([
       // Notifications
       { path: "notifications", element: <AllNotifications /> },
 
-
       // Settings Routes
       { path: "settings/profile", element: <Profile /> },
       { path: "settings/editpersonal", element: <EditProfile /> },
+      { path: "settings/changepassword", element: <ChangedPassword /> },
       { path: "settings/terms", element: <TermsAndConditions /> },
       { path: "settings/editterms", element: <EditTermsAndConditions /> },
       { path: "settings/privacy", element: <PrivacyPolicy /> },

@@ -18,7 +18,7 @@ const Profile = () => {
         {/* Change Password Button */}
         <div className="flex justify-end mb-8">
           <Link to="/dashboard/settings/changepassword">
-            <Button className="bg-[#FF6600] hover:bg-[#FF6600] text-white px-6 py-2 rounded-full flex items-center space-x-2 shadow-md">
+            <Button className="bg-[#FF6600] hover:bg-[#FF6600] text-white px-6 py-2 rounded-full flex items-center space-x-1 shadow-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -39,7 +39,7 @@ const Profile = () => {
         {/* Profile Card and Information Fields */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Profile Card */}
-          <div className="md:col-span-1   flex flex-col items-center">
+          <div className="md:col-span-1  p-6 rounded-lg shadow-md flex flex-col items-center">
             <Avatar className="h-40 w-40 mb-4">
               <AvatarImage
                 src="https://images.app.goo.gl/mrJyRYZVPjsik1j19"

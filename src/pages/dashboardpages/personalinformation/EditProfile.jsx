@@ -43,9 +43,9 @@ const EditProfile = () => {
   };
 
   return (
-    <div className="min-h-screen font-sans bg-gray-50">
+    <div className="min-h-screen font-sans ">
       {/* Header */}
-      <div className="bg-[#017783] text-white p-4 text-xl font-semibold flex justify-between items-center rounded-md">
+      <div className="bg-[#FF6600] text-white p-4 text-xl font-semibold flex justify-between items-center rounded-md">
         <span>Edit Personal Information</span>
       </div>
 
@@ -54,7 +54,7 @@ const EditProfile = () => {
         {/* Profile Card and Information Fields */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Profile Card */}
-          <div className="md:col-span-1 bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+          <div className="md:col-span-1  p-6 rounded-lg shadow-md flex flex-col items-center">
             <div className="relative mb-4">
               <Avatar className="h-40 w-40">
                 <AvatarImage
@@ -81,7 +81,7 @@ const EditProfile = () => {
           </div>
 
           {/* Information Fields */}
-          <div className="md:col-span-2 bg-white p-6 rounded-lg shadow-md space-y-6">
+          <div className="md:col-span-2  p-6 rounded-lg shadow-md space-y-6">
             <div>
               <Label
                 htmlFor="name"
@@ -141,7 +141,7 @@ const EditProfile = () => {
             {/* Additional Action Buttons */}
             <div className="flex space-x-4 pt-4">
               <div>
-                <Link to={"/dashboard/settings/personal"}>
+                <Link to={"/dashboard/settings/profile"}>
                   <Button
                     variant="outline"
                     className="flex-1 border-gray-300 text-gray-700 hover:bg-gray-50"
@@ -152,7 +152,7 @@ const EditProfile = () => {
               </div>
               <Button
                 onClick={handleSaveChanges}
-                className="flex-1 bg-[#017783] hover:bg-[#015a63] text-white"
+                className="flex-1 bg-[#FF6600] hover:bg-[#FF6600] text-white"
               >
                 Save Changes
               </Button>
