@@ -10,7 +10,7 @@ import OTPVerification from "../pages/auth/OTPVerification";
 import ResetPassword from "../pages/auth/ResetPassword";
 
 // Dashboard Pages
-import DashboardOverview from "../pages/dashboardpages/DashboardOverview/DashboardOverview";
+import DashboardOverview from "../pages/dashboardpages/dashboardOverview/DashboardOverview";
 
 // Profile/Settings Pages
 import Profile from "../pages/dashboardpages/personalinformation/Profile";
